@@ -55,7 +55,7 @@ tool for bulk-loading of random data
                             Number of records to generate when using random
                               command
       --threads=<threads>   Number of threads to use for generation.
-  -f, --file=<file>         file to digest, irrelevant for csv loader
+  -f, --file=<file>         file to digest, irrelevant for random loader
   -h, --help                Show this help message and exit.
   -V, --version             Print version information and exit.
 ```
