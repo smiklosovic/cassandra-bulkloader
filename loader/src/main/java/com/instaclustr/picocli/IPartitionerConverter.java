@@ -1,5 +1,6 @@
 package com.instaclustr.picocli;
 
+import static java.lang.String.format;
 import static java.util.Arrays.asList;
 
 import com.google.common.base.MoreObjects;
@@ -14,10 +15,10 @@ public class IPartitionerConverter implements CommandLine.ITypeConverter<IPartit
         if (Partitioner.parse(value) == Partitioner.MURMUR) {
             return new Murmur3Partitioner();
         }
-        throw new IllegalStateException(String.format("Unsupported partitioner '%s', supported are: %s", value, asList(Partitioner.values())));
+        throw new IllegalStateException(format("Unsupported partitioner '%s', supported are: %s", value, asList(Partitioner.values())));
     }
 
-    private static enum Partitioner {
+    private enum Partitioner {
         MURMUR("murmur");
 
         private final String name;

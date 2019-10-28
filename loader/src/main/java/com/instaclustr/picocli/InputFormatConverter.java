@@ -1,5 +1,6 @@
 package com.instaclustr.picocli;
 
+import static java.lang.String.format;
 import static java.util.Arrays.asList;
 
 import com.google.common.base.MoreObjects;
@@ -8,12 +9,12 @@ import picocli.CommandLine;
 public class InputFormatConverter implements CommandLine.ITypeConverter<InputFormatConverter.InputFormat> {
 
     @Override
-    public InputFormat convert(final String value) throws Exception {
+    public InputFormat convert(final String value) {
 
         final InputFormat inputFormat = InputFormat.parse(value);
 
         if (inputFormat == null) {
-            throw new IllegalStateException(String.format("Unsupported input format '%s', supported are: %s", value, asList(InputFormat.values())));
+            throw new IllegalStateException(format("Unsupported input format '%s', supported are: %s", value, asList(InputFormat.values())));
         }
 
         return inputFormat;
@@ -45,7 +46,9 @@ public class InputFormatConverter implements CommandLine.ITypeConverter<InputFor
 
         @Override
         public String toString() {
-            return MoreObjects.toStringHelper(InputFormat.this).add("name", name).toString();
+            return MoreObjects.toStringHelper(InputFormat.this)
+                              .add("name", name)
+                              .toString();
         }
     }
 }

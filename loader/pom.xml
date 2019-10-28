@@ -21,6 +21,8 @@
         <logback.version>1.2.3</logback.version>
         <jul.version>1.7.16</jul.version>
 
+        <version.junit>4.12</version.junit>
+
         <maven.shade.plugin.version>3.1.1</maven.shade.plugin.version>
         <maven.jar.plugin.version>3.1.1</maven.jar.plugin.version>
         <git.command.plugin.version>2.2.4</git.command.plugin.version>
@@ -85,8 +87,14 @@
             <artifactId>super-csv</artifactId>
             <version>${super.csv.version}</version>
         </dependency>
-    </dependencies>
 
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${version.junit}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
     <build>
         <plugins>
