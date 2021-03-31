@@ -16,7 +16,7 @@
         <cassandra.version>3.11.4</cassandra.version>
         <cassandra.driver.version>3.0.1</cassandra.driver.version>
         <super.csv.version>2.1.0</super.csv.version>
-        <guava.version>28.1-jre</guava.version>
+        <guava.version>29.0-jre</guava.version>
         <picocli.version>4.0.4</picocli.version>
         <logback.version>1.2.3</logback.version>
         <jul.version>1.7.16</jul.version>
