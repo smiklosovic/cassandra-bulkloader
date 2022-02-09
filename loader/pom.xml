@@ -13,7 +13,7 @@
     <version>1.0</version>
 
     <properties>
-        <cassandra.version>3.11.4</cassandra.version>
+        <cassandra.version>3.11.10</cassandra.version>
         <cassandra.driver.version>3.0.1</cassandra.driver.version>
         <super.csv.version>2.1.0</super.csv.version>
         <guava.version>28.1-jre</guava.version>
